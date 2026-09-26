@@ -80,18 +80,18 @@ The number of training epochs for each predictor was selected using validation p
 | Method | Test Spearman ($\rho$) | Test MSE |
 | :--- | :---: | :---: |
 | **ESM-only** | 0.217509 | 0.463568 |
-| **RITA-only** | 0.181734 | 0.429295 |
-| **ESM + RITA (Concatenation)** | **0.276425** | **0.425582** |
+| **RITA-only** | 0.156934 | 0.438006 |
+| **ESM + RITA (Concatenation)** | **0.337340** | **0.349592** |
 | **Representation Transfer** | 0.200646 | 0.440457 |
 
-The ESM + RITA concatenation model obtained a test Spearman correlation of 0.276425, compared with 0.217509 for ESM-only. The representation-transfer model achieved a test Spearman correlation of 0.200646.
+The ESM + RITA concatenation model obtained a test Spearman correlation of 0.337340, compared with 0.217509 for ESM-only. The representation-transfer model achieved a test Spearman correlation of 0.200646.
 
 ---
 
 ## 7. Interpretation
 
 - Combining the two frozen representations via concatenation improved the validation and test metrics relative to ESM-only in this experiment, suggesting that the RITA-s representation contains information that was useful in combination with ESM-2 for this dataset and split.
-- The learned representation-transfer model did not show the same improvement on the final test set, obtaining a test Spearman correlation of 0.200646 compared to 0.276425 for concatenation and 0.217509 for ESM-only.
+- The learned representation-transfer model did not show the same improvement on the final test set, obtaining a test Spearman correlation of 0.200646 compared to 0.337340 for concatenation and 0.217509 for ESM-only.
 - One possible explanation is that the learned mapping may not preserve all information useful for the downstream fluorescence prediction when projecting representations between two models trained under different pretraining objectives (causal autoregressive LM vs. bidirectional masked LM).
 - These findings represent an empirical observation for this specific dataset, split, and implementation, and do not imply that representation transfer is generally ineffective across other architectures or protein engineering tasks.
 
