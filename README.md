@@ -43,10 +43,11 @@ Final evaluation on the 213 held-out test variants after refitting on all 871 de
 
 | Method | Test Spearman ($\rho$) | Test MSE |
 | :--- | :---: | :---: |
-| **ESM-only** | 0.217509 | 0.463568 |
-| **RITA-only** | 0.156934 | 0.438006 |
-| **ESM + RITA (Concatenation)** | **0.337340** | **0.349592** |
-| **Representation Transfer** | 0.200646 | 0.440457 |
+| **ESM-only** | 0.217618 | 0.463568 |
+| **RITA-only** | 0.156970 | 0.438006 |
+| **ESM + RITA (Concatenation)** | **0.337409** | **0.349592** |
+| **Representation Transfer** | 0.200757 | 0.440457 |
+
 
 
 ---
